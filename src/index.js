@@ -1,3 +1,3 @@
 import './style.css';
 
-import './ScrollStateElement.jsx';
+import './ScrollProgressElement.jsx';

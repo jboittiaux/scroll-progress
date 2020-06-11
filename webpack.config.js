@@ -10,13 +10,13 @@ let config = {
     output: {
         path: path.resolve(__dirname, 'public', 'dist'),
         publicPath: 'public/',
-        filename: "scroll-state.js",
+        filename: "scroll-progress.js",
         chunkFilename: '[name].js'
     },
     plugins: [
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: 'scroll-state.css',
+            filename: 'scroll-progress.css',
         }),
     ],
     module: {

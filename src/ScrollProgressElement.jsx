@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 let pct = 0;
+const nodes = document.querySelectorAll('.sp-container');
 
 const handleScroll = () => {
     let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -12,9 +13,17 @@ const handleScroll = () => {
 };
 
 const render = () => {
-    const progress = <div id="st-bar" style={{ width: pct + '%' }}></div>;
+    let className = 'sp-bar';
+    className+= pct === 100 ? ' complete' : '';
 
-    ReactDOM.render(progress, document.querySelector('#st-container'));
+    const progress = (<div
+        className={ className }
+        style={{ width: pct + '%' }}
+    ></div>);
+
+    console.log(nodes.forEach((el) => {
+        ReactDOM.render(progress, el);
+    }));
 };
 
 handleScroll();
